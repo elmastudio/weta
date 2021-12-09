@@ -443,6 +443,16 @@ function weta_widgets_init() {
 	) );
 
 	register_sidebar( array (
+		'name' => esc_html__( 'Shop - Sidebar', 'weta' ),
+		'id' => 'shop-sidebar',
+		'description' => esc_html__( 'Widgets appear in a right-aligned sidebar on the shop pages.', 'weta' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget' => "</aside>",
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	) );
+
+	register_sidebar( array (
 		'name' => esc_html__( 'Front Page - FullWidth Top', 'weta' ),
 		'id' => 'front-fullwidth-top',
 		'description' => esc_html__( 'Widgets appear in a single-column widget area on the top of the Front Page.', 'weta' ),
@@ -667,6 +677,10 @@ function weta_body_class( $classes ) {
 	if ( is_active_sidebar( 'widgetarea-subscribe' ) ) {
 		$classes[] = 'show-subscribe';
 	}
+
+	if ( ! is_active_sidebar( 'shop-sidebar' ) ) {
+		$classes[] = 'no-shop-sidebar';
+	}	
 
 	return $classes;
 }

@@ -8,25 +8,24 @@
  */
 
 get_header(); ?>
-	
-	<div class="blog-wrap cf">
-		<div id="primary" class="site-content cf" role="main">
 
-		<article id="post-0" class="page no-results not-found cf">
+<div id="primary" class="site-content cf" role="main">
 
-				<header class="entry-header">
-					<h1 class="entry-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'weta' ); ?></h1>
-				</header><!--end .entry-header -->
+	<article id="post-0" class="page no-results not-found cf">
 
-				<div class="entry-content">
-					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try another search term?', 'weta' ); ?></p>
+			<header class="entry-header">
+				<h1 class="entry-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'weta' ); ?></h1>
+			</header><!--end .entry-header -->
 
-					<?php get_search_form(); ?>
+			<div class="entry-content">
+				<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try another search term?', 'weta' ); ?></p>
 
-				</div><!-- end .entry-content -->
-		</article><!-- end #post-0 -->
+				<?php get_search_form(); ?>
+
+			</div><!-- end .entry-content -->
+	</article><!-- end #post-0 -->
 
 </div><!-- end #primary -->
-	<?php get_sidebar(); ?>
-	</div><!-- end .blog-wrap -->
+
+<?php get_sidebar(); ?>
 <?php get_footer(); ?>

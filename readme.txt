@@ -6,6 +6,11 @@ https://www.elmastudio.de/doks/weta/ (German)
 
 Changelog:
 
+Version 1.1.5 (09/12/2021)
+---
+- Bugfix: Hide default sidebar on shop pages.
+- New: Custom shop sidebar.
+
 Version 1.1.4 (16/08/2021)
 ---
 - Bugfix: Remove support for API Manager plugin.

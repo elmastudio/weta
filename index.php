@@ -9,22 +9,20 @@
 
 get_header(); ?>
 
-	<div class="blog-wrap cf">
-		<div id="primary" class="site-content cf" role="main">
-		<?php
-			// Start the Loop.
-			while ( have_posts() ) : the_post();
+<div id="primary" class="site-content cf" role="main">
+<?php
+	// Start the Loop.
+	while ( have_posts() ) : the_post();
 
-				get_template_part( 'content' );
+		get_template_part( 'content' );
 
-				endwhile;
-		?>
+		endwhile;
+?>
 
-			<?php
-			// Previous/next post navigation.
-			weta_content_nav( 'nav-below' ); ?>
+	<?php
+	// Previous/next post navigation.
+	weta_content_nav( 'nav-below' ); ?>
 
-		</div><!-- end #primary -->
-	<?php get_sidebar(); ?>
-	</div><!-- end .blog-wrap -->
+</div><!-- end #primary -->
+<?php get_sidebar(); ?>
 <?php get_footer(); ?>

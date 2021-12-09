@@ -4,7 +4,7 @@ Theme URI: https://www.elmastudio.de/en/themes/weta/
 Author: Elmastudio
 Author URI: https://www.elmastudio.de/en/
 Description: Weta is a minimal, responsive Magazine and eCommerce theme with support for the WooCommerce eCommerce plugin. You can build your individual Magazine-style front page using Weta's custom widgets or sell your products in a clean and elegant way.
-Version: 1.1.4
+Version: 1.1.5
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: custom-background, custom-header, custom-menu, editor-style, featured-images, post-formats, rtl-language-support, sticky-post, translation-ready
@@ -1791,8 +1791,12 @@ font-size: 1.1875rem;
 	margin: 0 auto;
 		padding: 64px 25px 0;
 }
-.fullwidth #primary {
+.fullwidth .blog-wrap #primary {
 	max-width: 1200px;
+	width: auto;
+}
+.nosidebar .blog-wrap #primary {
+	float: none;
 }
 
 
@@ -5903,6 +5907,12 @@ ul.product-categories {
 		width: 66%;
 		float: left;
 	}
+	.single-product .blog-wrap #primary,
+	.no-shop-sidebar .blog-wrap #primary,
+	.page-template-cart-page .blog-wrap #primary {
+		width: 100%;
+		float: none;
+	}
 	.blog-fullwidth .blog-wrap #primary {
 		width: 66%;
 		float: none;
@@ -6166,6 +6176,9 @@ ul.product-categories {
 @media screen and (min-width: 1260px) {
 
 	/* --- General --- */
+	.fullwidth .blog-wrap {
+		max-width: 1200px;
+	}
 		#colophon,
 		.show-subscribe #colophon {
 		padding: 120px 0 40px;
@@ -6460,6 +6473,11 @@ ul.product-categories {
 		width: 43.3%;
 		float: right;
 		clear: right;
+	}
+
+	/* --- WooCommerce Product Archives --- */
+	.woocommerce .blog-wrap {
+		max-width: 1200px;
 	}
 
 }

@@ -82,3 +82,4 @@
 		</div><!-- end .header-bg -->
 
 <div id="main-wrap">
+	<div class="blog-wrap cf">

@@ -8,6 +8,8 @@
  */
 ?>
 
+</div><!-- end .blog-wrap -->
+
 <footer id="colophon" class="site-footer cf">
 
 	<div class="footer-wrap">

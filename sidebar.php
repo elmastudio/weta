@@ -7,10 +7,21 @@
  * @version 1.0
  */
 
-if ( ! is_active_sidebar( 'blog-sidebar' ) ) {
-	return;
+if ( is_woocommerce() ) {
+	if ( is_active_sidebar( 'shop-sidebar' ) ) {
+		?>
+		<div id="blog-sidebar" class="default-sidebar sidebar-small widget-area" role="complementary">
+			<?php dynamic_sidebar( 'shop-sidebar' ); ?>
+		</div><!-- end #shop-sidebar -->
+		<?php
+	}
+} else {
+	if ( is_active_sidebar( 'blog-sidebar' ) ) {
+		?>
+		<div id="blog-sidebar" class="default-sidebar sidebar-small widget-area" role="complementary">
+			<?php dynamic_sidebar( 'blog-sidebar' ); ?>
+		</div><!-- end #blog-sidebar -->
+		<?php
+	}
 }
 ?>
-<div id="blog-sidebar" class="default-sidebar sidebar-small widget-area" role="complementary">
-	<?php dynamic_sidebar( 'blog-sidebar' ); ?>
-</div><!-- end #blog-sidebar -->
